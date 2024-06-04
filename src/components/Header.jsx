@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Image } from "@nextui-org/react";
 import { IoMenu } from "react-icons/io5";
 import logo from '../assets/cca-logo.png'
-
+import {Avatar} from "@nextui-org/react";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <Navbar className='bg-indigo-800 text-white' onMenuOpenChange={setIsMenuOpen}>
+        <Navbar className='bg-green-[#8asfs2] text-white' onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent>
                 <NavbarBrand>
                     <Image height={45} width={45} alt='cca' src={logo} />
@@ -36,6 +36,12 @@ const Header = () => {
                     <Link href="/about-us" className='text-white'>
                         About us
                     </Link>
+
+                </NavbarItem>
+                <NavbarItem>
+    
+                          <Avatar src={logo} />
+
                 </NavbarItem>
             </NavbarContent>
 
@@ -46,6 +52,7 @@ const Header = () => {
                     className=" sm:hidden w-8"
                 >
                 </NavbarMenuToggle>
+
             </NavbarContent>
             <NavbarMenu>
                 <NavbarMenuItem >
